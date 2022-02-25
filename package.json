@@ -6,7 +6,8 @@
   "sideEffects": false,
   "scripts": {
     "postinstall": "remix setup cloudflare-pages",
-    "build": "cross-env NODE_ENV=production remix build",
+    "build": "cross-env NODE_ENV=production remix build && run-p build:css",
+    "build:css": "tailwindcss -o ./app/tailwind.css",
     "dev:remix": "cross-env NODE_ENV=development remix watch",
     "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
     "dev:css": "tailwindcss -o ./app/tailwind.css --watch",
