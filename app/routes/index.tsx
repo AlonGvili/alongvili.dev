@@ -1,7 +1,9 @@
+import { LinksFunction } from "remix";
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Alon gvili website</h1>
+    <div>
+      <h1 className="text-2xl text-[#394359]">Welcome to Alon Gvili site</h1>
     </div>
   );
 }
